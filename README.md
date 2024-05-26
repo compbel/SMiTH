@@ -31,13 +31,13 @@ The project is run from the script ``runSMiTH.m``. In this script the user shoul
    - `pi` is the parent of the node _i_ and ``si`` is an ID of the site corresponding to that node;
    - `pr=0` for the root node `r`, and `si=0` for internal nodes _i_.
 
-   `p1 s1`
+   `p1` `s1`
    
-   `p2 s2`
+   `p2` `s2`
    
-   ...
+   `...`
    
-   `pN sN`
+   `pN` `sN`
   
      See some examples in the folder `input example`.
 
