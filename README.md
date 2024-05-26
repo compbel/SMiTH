@@ -56,7 +56,7 @@ The project is run from the script ``runSMiTH.m``. In this script the user shoul
      - `'compact'`
 
 ### Input: optional parameters
-   * ``timeLimit``   time limit for running an ILP solver for the unconstrained homomorphism problem. If ``constr='unconstrained'``, set it to number of second Gurobi solves ILP; if unlimited, set `timeLimit = NaN`. If `constr` is not'unconstrained', set `timeLimit = NaN`.
+   * ``timeLimit``   time limit for running an ILP solver for the unconstrained homomorphism problem. If ``constr='unconstrained'``, set it to number of second Gurobi solves ILP; if unlimited, set `timeLimit = NaN`. If `constr` is not `'unconstrained'`, set `timeLimit = NaN`.
    * ``fileSeq``   fasta file with sequences. Should be specified only if genetic diversity of populations is used in calculations. It is assumed that for each sequence the ID of the population where it belongs is the part of its header. If you do not want to use diversity in the algorithm, set `fileSeq = []`.
    * ``delimeter``   character used to specify the boundary between different tokens of a sequence header in the fasta file, with population ID being one of these tokens. It is needed only when `fileSeq` is specified. E.g., for the sequence header `>N614|56|100.0`, it is a vertical bar `|`. If you do not want to use diversity in the algorithm, set `delimeter = NaN`.
    * ``tokenPos``   the index of the token of a sequence header in the fasta file with the population ID.  E.g., for the sequence header `>N614|56|100.0`, it is equal `2`. If you do not want to use diversity in the algorithm, set `tokenPos = NaN`.
