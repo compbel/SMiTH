@@ -1,7 +1,7 @@
 # SMiTH
 SMiTH (Sampling MIgration Trees using Homomorphisms) is a tool for inferring migration trees with expected properties.
 
-## Algorithm:
+## Algorithm
 ![alt text](/images/flow.png)
 
 **A**: Input phylogenetic tree. 
@@ -15,26 +15,25 @@ SMiTH (Sampling MIgration Trees using Homomorphisms) is a tool for inferring mig
 **E**: consensus solution derived from homomorphisms in **D**. The solution is shown as potential color distributions for the phylogeny's nodes (left) or as a graph where possible migration edges are weighted according to the number of supporting solutions (right), with the edge thickness indicating weight.
 
 
-## Pre-requisites:
+## Pre-requisites
    - Matlab
    - Gurobi
 
-## Instructions:
+## Instructions
 
-The main function is  
-``[migrSamp,objSamp,originSamp,consensus, siteList] = migrationSampler(filePhylo,sampGenerator,...
-    nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos)``
+The project is run from the script ``runSMiTH.m``. In this script the user run the main function ``migrationSampler`` with necessary parameters.
+``[migrSamp,objSamp,originSamp,consensus, siteList] = migrationSampler(filePhylo,sampGenerator,nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos)``
 
 Input: required parameters:
-- ``filePhylo`` -      file with the phylogenetic tree. Should consist of N rows of the form:
-p1 s1
-p2 s2
+- ``filePhylo`` -      file with the phylogenetic tree. Should consist of _N_ rows of the form:
+`p1` `s1`
+`p2` `s2`
 ...
-pN sN
+`pN` `sN`
 where
- -- the ith row corresponds to the ith tree node,
- -- pi is the parent of the node i and si is an id of the site corresponding to that node.
- -- pr=0 for the root node r, and si=0 for internal nodes i.
+ -- the _i_<sup>th<sup> row corresponds to the _i_<sup>th<sup> tree node,
+ -- `pi` is the parent of the node _i_ and ``si`` is an id of the site corresponding to that node.
+ -- `pr=0` for the root node `r`, and `si=0` for internal nodes `i`.
 
 - ``sampGeneratorf`` -  handle to the function sampling candidate migration trees from a particular distribution. Should have the tree size as a single argument. Current version of SMiTH package provides two predefined sampling function:
 - -- randTreeUniform for uniform sampling, 
