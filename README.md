@@ -17,7 +17,7 @@ SMiTH (Sampling MIgration Trees using Homomorphisms) is a tool for inferring mig
 
 ## Pre-requisites
    - Matlab
-   - Gurobi
+   - Gurobi (only if you want to use `'unconstrained'` mode for inference of compatibility of a migration tree and a phylogeny)
 
 ## Instructions
 
@@ -50,10 +50,10 @@ The project is run from the script ``runSMiTH.m``. In this script the user shoul
 * ``nSamp``   number of candidate trees to be sampled.
 * ``constr``   structural constraints for inference of compatibility of a migration tree and a phylogeny.
      Possible values:
-     - `'unconstrained'`;
-     - `'convex'`;
-     - `'convexMaxCompact'` (convex homomorphism with maximum compactness);
-     - `'compact'`.
+     - `'unconstrained'`
+     - `'convex'`
+     - `'convexMaxCompact'` (convex homomorphism with maximum compactness)
+     - `'compact'`
 
 ### Input: optional parameters
    * ``timeLimit``   time limit for running an ILP solver for the unconstrained homomorphism problem. Not relevant for other types of constraints, can be set as `[]`.
