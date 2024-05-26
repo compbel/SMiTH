@@ -1,5 +1,5 @@
 # SMiTH
-SMiTH (Sampling MIgration Trees using Homomorphisms) is a tool for inferring migration trees with expected properties.
+SMiTH (**S**ampling **Mi**gration **T**rees using **H**omomorphisms) is a tool for inferring migration trees with expected properties.
 
 ## Algorithm
 ![alt text](/images/flow.png)
