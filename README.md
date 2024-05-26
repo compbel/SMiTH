@@ -1,8 +1,6 @@
 # SMiTH
 SMiTH (Sampling MIgration Trees using Homomorphisms) is a tool for inferring migration trees with expected properties.
 
-A computational framework for identifying epistatically linked sets of SAV alleles and merging them into haplotypes using statistical inference, population genetics, and graph theory.
-
 ## Algorithm:
 ![alt text](/images/flow.pdf)
 
