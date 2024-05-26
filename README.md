@@ -37,7 +37,7 @@ The project is run from the script ``runSMiTH.m``. In this script the user run t
 
    where
    - the _i_<sup>th</sup> row corresponds to the _i_<sup>th</sup> tree node;
-   - `pi` is the parent of the node _i_ and ``si`` is an id of the site corresponding to that node;
+   - `pi` is the parent of the node _i_ and ``si`` is an ID of the site corresponding to that node;
    - `pr=0` for the root node `r`, and `si=0` for internal nodes _i_.
 
 * ``sampGeneratorf``   handle to the function sampling candidate migration trees from a particular distribution. Should have the tree size as a single argument. Current version of SMiTH package provides two predefined sampling function:
@@ -49,16 +49,16 @@ The project is run from the script ``runSMiTH.m``. In this script the user run t
 * ``nSamp``   number of candidate trees to be sampled
 * ``constr``   structural constraints for inference of compatibility of a migration tree and a phylogeny.
      Possible values:
-     - 'unconstrained';
-     - 'convex';
-     - 'convexMaxCompact' (convex homomorphism with maximum compactness);
-     - 'compact'.
+     - `'unconstrained'`;
+     - `'convex'`;
+     - `'convexMaxCompact'` (convex homomorphism with maximum compactness);
+     - `'compact'`.
 
 ### Input: optional parameters
    * ``timeLimit``   time limit for running an ILP solver for the unconstrained homomorphism problem. Not relevant for other types of constraints, can be set as `[]`.
-   * ``fileSeq``   fasta file with sequences. Should be specified only if genetic diversity of populations is used in calculations. It is assumed that for each sequence the id of the population where it belongs is the part of its header. If you do not want to use diversity in the algorithm, set `divers = []`;
-   * ``delimeter``   character used to specify the boundary between different tokens of a sequence header, with population id being one of these tokens.
-   * ``tokenPos``   the index of the token with the population id.
+   * ``fileSeq``   fasta file with sequences. Should be specified only if genetic diversity of populations is used in calculations. It is assumed that for each sequence the ID of the population where it belongs is the part of its header. If you do not want to use diversity in the algorithm, set `divers = []`;
+   * ``delimeter``   character used to specify the boundary between different tokens of a sequence header, with population ID being one of these tokens.
+   * ``tokenPos``   the index of the token with the population ID.
 
 ### Output
  * ``migrSamp``   sample of migration trees compatible with the given phylogeny.
