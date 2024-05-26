@@ -64,11 +64,11 @@ The project is run from the script ``runSMiTH.m``. In this script the user shoul
  * ``migrSamp``   sample of migration trees compatible with the given phylogeny.
  * ``objSamp``   values of objective functions for sampled tree. 
  * ``originSamp``   origins (i.e., migration site corresponding to the root of the phylogeny) for sampled trees. Can be used to analyze migration directionality if needed.
- * ``consensus``   consensus matrix of the sample, i.e., `consensus(i,j)` is the frequency of sampled migration trees with vertices _i_ and _j_ being adjacent
+ * ``consensus``   consensus matrix of the sample, i.e., `consensus(i,j)` is the frequency of sampled migration trees with vertices _i_ and _j_ being adjacent.
  * ``siteList``   the list of migration sites in the same order as the migration tree vertices, i.e., `siteList(i)` is the site corresponding to the _i_<sup>th</sup> vertex of migration trees from `migrSamp`.
 
 ## Example: 
-`filePhylo = ['input example' filesep 'input8.csv'];
+```filePhylo = ['input example' filesep 'input8.csv'];
 sampGenerator = @randTreePrefAttach;
 nSamp = 100;
 constr = 'convexMaxCompact'; 
@@ -77,7 +77,8 @@ fileSeq = ['input example' filesep 'sequence_data8.fasta'];
 delimeter = '|';
 tokenPos = 2;
 
-[migrSamp,objSamp,originSamp,consensus,siteList] = migrationSampler(filePhylo,sampGenerator,nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos);`
+[migrSamp,objSamp,originSamp,consensus,siteList] = migrationSampler(filePhylo,sampGenerator,nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos);
+```
 
 
 ## Citation:
