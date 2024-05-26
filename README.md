@@ -22,6 +22,7 @@ SMiTH (Sampling MIgration Trees using Homomorphisms) is a tool for inferring mig
 ## Instructions
 
 The project is run from the script ``runSMiTH.m``. In this script the user should run the main function ``migrationSampler`` with necessary parameters.
+
 ```[migrSamp,objSamp,originSamp,consensus, siteList] = migrationSampler(filePhylo,sampGenerator,nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos)```
 
 ### Input: required parameters
@@ -67,7 +68,7 @@ The project is run from the script ``runSMiTH.m``. In this script the user shoul
  * ``consensus``   consensus matrix of the sample, i.e., `consensus(i,j)` is the frequency of sampled migration trees with vertices _i_ and _j_ being adjacent.
  * ``siteList``   the list of migration sites in the same order as the migration tree vertices, i.e., `siteList(i)` is the site corresponding to the _i_<sup>th</sup> vertex of migration trees from `migrSamp`.
 
-## Example: 
+## Example
 ```filePhylo = ['input example' filesep 'input8.csv'];
 sampGenerator = @randTreePrefAttach;
 nSamp = 100;
@@ -77,9 +78,9 @@ fileSeq = ['input example' filesep 'sequence_data8.fasta'];
 delimeter = '|';
 tokenPos = 2;
 
-[migrSamp,objSamp,originSamp,consensus,siteList] = migrationSampler(filePhylo,sampGenerator,nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos);
+[migrSamp,objSamp,originSamp,consensus, siteList] = migrationSampler(filePhylo,sampGenerator,...
+    nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos);
 ```
 
-
-## Citation:
+## Citation
 TBA
