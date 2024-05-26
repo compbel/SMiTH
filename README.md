@@ -38,7 +38,7 @@ The project is run from the script ``runSMiTH.m``. In this script the user run t
    where
    - the _i_<sup>th</sup> row corresponds to the _i_<sup>th</sup> tree node;
    - `pi` is the parent of the node _i_ and ``si`` is an id of the site corresponding to that node;
-   - `pr=0` for the root node `r`, and `si=0` for internal nodes `i`.
+   - `pr=0` for the root node `r`, and `si=0` for internal nodes _i_.
 
 * ``sampGeneratorf``   handle to the function sampling candidate migration trees from a particular distribution. Should have the tree size as a single argument. Current version of SMiTH package provides two predefined sampling function:
    - `randTreeUniform` for uniform sampling;
