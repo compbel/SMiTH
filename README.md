@@ -4,7 +4,11 @@ SMiTH (Sampling MIgration Trees using Homomorphisms) is a tool for inferring mig
 ## Algorithm:
 ![alt text](/images/flow.png)
 
-{\bf A}: Input phylogenetic tree. {\bf B}: Distribution of possible migration trees. Parallel rectangles depict a probability density function, with each rectangle's width proportional to the corresponding probability. In practice, the distribution is represented either by a random graph model or by a stochastic graph generation procedure. {\bf C}: Candidate migration trees sampled from the distribution B. {\bf D}: Homomorphisms from the phylogeny to three sampled trees. In the phylogenies, nodes are color-coded by their homomorphic images in a migration tree. The phylogeny layouts in the middle of each subfigure showcases how homomorphism transforms them into sampled trees.  {\bf E}: consensus solution derived from homomorphisms in D. The solution is shown as potential color distributions for the phylogeny's nodes (left) or as a graph where possible migration edges are weighted according to the number of supporting solutions (right), with the edge thickness indicating weight.
+**A**: Input phylogenetic tree. 
+**B**: Distribution of possible migration trees. Parallel rectangles depict a probability density function, with each rectangle's width proportional to the corresponding probability. In practice, the distribution is represented either by a random graph model or by a stochastic graph generation procedure. 
+**C**: Candidate migration trees sampled from the distribution **B**. 
+**D**: Homomorphisms from the phylogeny to three sampled trees. In the phylogenies, nodes are color-coded by their homomorphic images in a migration tree. The phylogeny layouts in the middle of each subfigure showcases how homomorphism transforms them into sampled trees.  
+**E**: consensus solution derived from homomorphisms in **D**. The solution is shown as potential color distributions for the phylogeny's nodes (left) or as a graph where possible migration edges are weighted according to the number of supporting solutions (right), with the edge thickness indicating weight.
 
 
 ## Pre-requisites:
