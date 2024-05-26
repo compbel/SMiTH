@@ -22,7 +22,7 @@ SMiTH (Sampling MIgration Trees using Homomorphisms) is a tool for inferring mig
 ## Instructions
 
 The project is run from the script ``runSMiTH.m``. In this script the user should run the main function ``migrationSampler`` with necessary parameters.
-``[migrSamp,objSamp,originSamp,consensus, siteList] = migrationSampler(filePhylo,sampGenerator,nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos)``
+```[migrSamp,objSamp,originSamp,consensus, siteList] = migrationSampler(filePhylo,sampGenerator,nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos)```
 
 ### Input: required parameters
 * ``filePhylo``:   file with the phylogenetic tree. Should consist of _N_ rows of the form:
