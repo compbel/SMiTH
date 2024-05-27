@@ -1,16 +1,16 @@
 warning('off','all')
-filePhylo = ['input example' filesep 'input8.csv'];
+filePhylo = ['..' filesep 'input example' filesep 'small_example_input.csv'];
 sampGenerator = @randTreePrefAttach;
 nSamp = 100;
-constr = 'convexMaxCompact'; 
-timeLimit = 600;
-% fileSeq = ['input example' filesep 'sequence_data8.fasta'];
-fileSeq = [];
+constr = 'compact'; 
+timeLimit = NaN;
+fileSeq = ['..' filesep 'input example' filesep 'small_example_sequence_data.fasta'];
+% fileSeq = [];
 delimeter = '|';
 tokenPos = 2;
 
 
-[migrSamp,objSamp,originSamp,consensus, siteList] = migrationSampler(filePhylo,sampGenerator,...
+[migrSamp,objSamp,originSamp,consensus,siteList] = migrationSampler(filePhylo,sampGenerator,...
     nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos);
 
 % In these lines, we construct a maximal spanning tree of the consensus,
