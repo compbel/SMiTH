@@ -42,8 +42,8 @@ The project is run from the script ``runSMiTH.m``. In this script the user shoul
      See some examples in the folder `input example`.
 
 * ``sampGenerator``   handle to the function sampling candidate migration trees from a particular distribution. Should have the tree size as a single argument. Current version of SMiTH package provides two predefined sampling function:
-   - `randTreeUniform` for uniform sampling;
-   - `randTreePrefAttach` for sampling via preferential attachment procedure.
+   - `@randTreeUniform` for uniform sampling;
+   - `@randTreePrefAttach` for sampling via preferential attachment procedure.
      
   Users can provide their own custom sampling functions.
   
