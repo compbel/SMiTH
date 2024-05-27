@@ -23,7 +23,7 @@ SMiTH (**S**ampling **Mi**gration **T**rees using **H**omomorphisms) is a tool f
 
 The project is run from the script ``runSMiTH.m``. In this script the user should run the main function ``migrationSampler`` with necessary parameters.
 
-```[migrSamp,objSamp,originSamp,consensus, siteList] = migrationSampler(filePhylo,sampGenerator,nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos)```
+```[migrSamp,objSamp,originSamp,consensus,siteList] = migrationSampler(filePhylo,sampGenerator,nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos)```
 
 ### Input: required parameters
 * ``filePhylo``:  csv-file with the phylogenetic tree. It must consist of _N_ rows and 2 columns `parent ID` and `label` (color of this node / ID of the site corresponding to this node):
@@ -78,7 +78,7 @@ fileSeq = ['input example' filesep 'sequence_data8.fasta'];
 delimeter = '|';
 tokenPos = 2;
 
-[migrSamp,objSamp,originSamp,consensus, siteList] = migrationSampler(filePhylo,sampGenerator,...
+[migrSamp,objSamp,originSamp,consensus,siteList] = migrationSampler(filePhylo,sampGenerator,...
     nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos);
 ```
 
