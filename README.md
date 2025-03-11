@@ -81,6 +81,77 @@ tokenPos = 2;
 [migrSamp,objSamp,originSamp,consensus,siteList] = migrationSampler(filePhylo,sampGenerator,...
     nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos);
 ```
+---
+
+## Running `runMigrationSamplerReduced` Without a MATLAB License  
+This guide provides step-by-step instructions for running the compiled MATLAB application **`runMigrationSamplerReduced`** on a machine **without MATLAB installed**. The application was created using **MATLAB Compiler**, and it requires the **MATLAB Runtime** to execute.  
+
+
+
+### **Prerequisites**  
+#### **1. MATLAB Runtime**
+- The target machine **must have MATLAB Runtime installed**.  
+- MATLAB Runtime is **free** and does **not require a MATLAB license**.  
+
+#### **2. Operating System Compatibility**  
+- Ensure the **target machine** runs the same operating system (Windows, macOS, or Linux) that the application was compiled for.  
+
+
+
+### **Step 1: Download and Install MATLAB Runtime**  
+MATLAB Runtime is required to run the compiled application.  
+
+1. **Go to the MATLAB Runtime download page**:  
+   - [MATLAB Runtime Download Page](https://www.mathworks.com/products/compiler/matlab-runtime.html)  
+2. **Download the correct MATLAB Runtime version** that matches the version used to compile the application.  
+3. **Install MATLAB Runtime**:
+   - **Windows**: Run the installer executable (`.exe`) and follow the prompts.  
+   - **Linux/macOS**: Open a terminal and run:  
+     ```sh
+     ./install -mode silent -agreeToLicense yes
+     ```
+
+### **Step 2: Download the Compiled Application**  
+Ensure you have all the necessary compiled application files. These should include:  
+
+The **executable file**:  
+   - **Windows**: `runMigrationSamplerReduced.exe`  
+   - **Linux/macOS**: `runMigrationSamplerReduced`  
+
+The **shell script** to launch the application:  
+   - `run_runMigrationSamplerReduced.sh`  
+
+Any **additional input files or dependencies** required by the application:  
+   - `config.txt` (configuration file for setting input parameters)  
+   - Any **data files** required by the program  
+
+
+
+
+### **Step 3: Configure Input Parameters (`config.txt`)**  
+Before running the program, modify `config.txt` to set the required parameters. 
+
+
+### **Step 4: Run the Application**  
+#### **Windows**  
+1. Open **Command Prompt** (`cmd`).  
+2. Navigate to the directory containing the compiled files:  
+```sh
+cd path\to\your\executable
+runMigrationSamplerReduced.exe
+```
+
+#### **Linux/MacOS**  
+1. Open **Command Prompt** (`cmd`).  
+2. Navigate to the directory containing the compiled files:  
+```sh
+cd path\to\your\executable
+chmod +x runMigrationSamplerReduced.sh
+./runMigrationSamplerReduced.sh
+```
+
+
+
 
 ## Citation
 TBA
