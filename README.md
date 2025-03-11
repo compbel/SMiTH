@@ -115,21 +115,21 @@ MATLAB Runtime is required to run the compiled application.
 Ensure you have all the necessary compiled application files. These should include:  
 
 The **executable file**:  
-   - **Windows**: `runMigrationSamplerReduced.exe`  
-   - **Linux/macOS**: `runMigrationSamplerReduced`  
+   - **Windows**: `Compiler/runMigrationSamplerReduced.exe`  
+   - **Linux/macOS**: `Compiler/runMigrationSamplerReduced`  
 
 The **shell script** to launch the application:  
-   - `run_runMigrationSamplerReduced.sh`  
+   - `Compiler/run_runMigrationSamplerReduced.sh`  
 
 Any **additional input files or dependencies** required by the application:  
-   - `config.txt` (configuration file for setting input parameters)  
+   - `Compiler/config.txt` (configuration file for setting input parameters)  
    - Any **data files** required by the program  
 
 
 
 
 ### **Step 3: Configure Input Parameters (`config.txt`)**  
-Before running the program, modify `config.txt` to set the required parameters. 
+Before running the program, modify `Compiler/config.txt` to set the required parameters. 
 
 
 ### **Step 4: Run the Application**  
@@ -137,7 +137,7 @@ Before running the program, modify `config.txt` to set the required parameters.
 1. Open **Command Prompt** (`cmd`).  
 2. Navigate to the directory containing the compiled files:  
 ```sh
-cd path\to\your\executable
+cd Compiler
 runMigrationSamplerReduced.exe
 ```
 
@@ -145,9 +145,9 @@ runMigrationSamplerReduced.exe
 1. Open **Command Prompt** (`cmd`).  
 2. Navigate to the directory containing the compiled files:  
 ```sh
-cd path\to\your\executable
-chmod +x runMigrationSamplerReduced.sh
-./runMigrationSamplerReduced.sh
+cd Compiler
+chmod +x run_runMigrationSamplerReduced.sh
+./run_runMigrationSamplerReduced.sh
 ```
 
 
