@@ -101,7 +101,8 @@ Before running the program, update `CODE/config.txt` to define the required para
    * ``delimeter``   character used to specify the boundary between different tokens of a sequence header in the fasta file, with population ID being one of these tokens. It is needed only when `fileSeq` is specified. E.g., for the sequence header `>N614|56|100.0`, it is a vertical bar `|`. If you do not use diversity in the algorithm, set `delimeter = NaN`.
    * ``tokenPos``   the index of the token of a sequence header in the fasta file with the population ID.  E.g., for the sequence header `>N614|56|100.0`, it is equal `2` (we want to separate `56`). If you do not use diversity in the algorithm, set `tokenPos = NaN`.
 ### Example
-```filePhylo=myPhyloFile.txt
+```
+filePhylo=myPhyloFile.txt
 nSamp=200
 constr=convexMaxCompact
 timeLimit=500
