@@ -132,7 +132,7 @@ if __name__ == "__main__":
     pattern = re.compile(r"^\d+-G-\d+-S\.tree$")  # Regex pattern to match 'number_G_number_S.txt'
 
     for i in range(1, 501):
-        fav_folder = f"log_50/FAVITES_output_logSI_contemp_T200_N100_E1_{i}/"
+        fav_folder = f"Favites_log/FAVITES_output_logSI_contemp_T200_N100_E1_{i}/"
         
         # List all files in the machina results folder
         model_folder_path = f"machina_results/FAVITES_output_logSI_contemp_T200_N100_E1_{i}/"
