@@ -1,8 +1,0 @@
-filePhylo=myPhyloFile.txt
-nSamp=200
-constr=convexMaxCompact
-timeLimit=500
-perc=100
-fileSeq=sequence_data8.fasta
-delimeter=|
-tokenPos=2
