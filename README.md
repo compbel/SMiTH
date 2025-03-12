@@ -59,9 +59,9 @@ Any **additional input files or dependencies** required by the application:
 
 
 ### **Step 3: Configure Input Parameters (`config.txt`)**  
-Before running the program, update Compiler/config.txt to set the required parameters.
-The config.txt file includes the required parameters for runMigrationSamplerReduced, such as:
-
+Before running the program, update Compiler/config.txt to define the required parameters for runMigrationSamplerReduced. This file specifies key input settings, such as the phylogenetic tree file, sampling method, and structural constraints. Properly configuring this file ensures that the program runs with the correct input data.
+ 
+### **Required Parameters**
 * ``filePhylo``:  csv-file with the phylogenetic tree. It must consist of _N_ rows and 2 columns `parent ID` and `label` (color of this node / ID of the site corresponding to this node):
    - the _i_<sup>th</sup> row corresponds to the _i_<sup>th</sup> tree node;
    - `pi` is the parent of the node _i_ and ``si`` is an ID of the site corresponding to that node;
@@ -99,12 +99,6 @@ The config.txt file includes the required parameters for runMigrationSamplerRedu
    * ``fileSeq``   fasta file with sequences. Should be specified only if genetic diversity of populations is used in calculations. It is assumed that for each sequence the ID of the population where it belongs is the part of its header. If you do not want to use diversity in the algorithm, set `fileSeq = []`.
    * ``delimeter``   character used to specify the boundary between different tokens of a sequence header in the fasta file, with population ID being one of these tokens. It is needed only when `fileSeq` is specified. E.g., for the sequence header `>N614|56|100.0`, it is a vertical bar `|`. If you do not use diversity in the algorithm, set `delimeter = NaN`.
    * ``tokenPos``   the index of the token of a sequence header in the fasta file with the population ID.  E.g., for the sequence header `>N614|56|100.0`, it is equal `2` (we want to separate `56`). If you do not use diversity in the algorithm, set `tokenPos = NaN`.
-
-### Output
- * ``originSamp``   origins (i.e., migration site corresponding to the root of the phylogeny) for sampled trees. Can be used to analyze migration directionality if needed.
- * ``consensus``   consensus matrix of the sample, i.e., `consensus(i,j)` is the frequency of sampled migration trees with vertices _i_ and _j_ being adjacent.
- * ``siteList``   the list of migration sites in the same order as the migration tree vertices, i.e., `siteList(i)` is the site corresponding to the _i_<sup>th</sup> vertex of migration trees from `migrSamp`.
-
 ### Example
 ```filePhylo=myPhyloFile.txt
 nSamp=200
@@ -115,6 +109,15 @@ fileSeq=sequence_data8.fasta
 delimeter=|
 tokenPos=2
 ```
+
+### **Expected Output**
+This part describes the **output files/variables** that the user will obtain **after running `runMigrationSamplerReduced`**.
+
+ * ``originSamp``   origins (i.e., migration site corresponding to the root of the phylogeny) for sampled trees. Can be used to analyze migration directionality if needed.
+ * ``consensus``   consensus matrix of the sample, i.e., `consensus(i,j)` is the frequency of sampled migration trees with vertices _i_ and _j_ being adjacent.
+ * ``siteList``   the list of migration sites in the same order as the migration tree vertices, i.e., `siteList(i)` is the site corresponding to the _i_<sup>th</sup> vertex of migration trees from `migrSamp`.
+
+
 
 
 ### **Step 4: Run the Application**  
@@ -137,9 +140,9 @@ chmod +x run_runMigrationSamplerReduced.sh
 
 
 ## Running SMiTH Using MATLAB License 
-This guide provides step-by-step instructions for running the SMiTH code with a MATLAB license. The program requires MATLAB installed, and Gurobi is needed only when using the 'unconstrained' mode for inferring the compatibility of a migration tree and a phylogeny.
+This guide provides step-by-step instructions for running the SMiTH code with a MATLAB license. The program requires MATLAB to be installed, and Gurobi is needed only when using the 'unconstrained' mode for inferring the compatibility of a migration tree and a phylogeny.
 
-The project is run from the script ``runSMiTH.m``. In this script the user should run the main function ``migrationSampler`` with necessary parameters.
+The project is executed using the runSMiTH.m script, where the user should call the main function migrationSampler with the required parameters.
 
 ```[migrSamp,objSamp,originSamp,consensus,siteList] = migrationSampler(filePhylo,sampGenerator,nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos)```
 
