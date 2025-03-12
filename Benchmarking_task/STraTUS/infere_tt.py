@@ -1,6 +1,5 @@
 """
 Author: Maryam KafiKang
-Created: 2024
 Description: A companion script that processes STraTUS output (_tt.csv files) to infer 
                     transmission trees. It works by:
                     1. Extracting edges and their weights from STraTUS CSV output
