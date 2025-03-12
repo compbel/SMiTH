@@ -46,7 +46,7 @@ if __name__ == '__main__':
         ['Test Data', 'Model', 'Execution Time (seconds)', '#hosts']
     )
 
-    data = "log_50"
+    data = "Favites_log"
     
     #for i in range(1, 2):
     i = args.i
