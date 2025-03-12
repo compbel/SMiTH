@@ -1,6 +1,5 @@
 """
 Author: Maryam KafiKang
-Created: 2024
 Description: This script processes phylogenetic trees for MACHINA analysis by pruning and
             reformatting them. It performs several key operations:
             1. Tree Pruning: Collapses nodes with identical host IDs to simplify the tree
