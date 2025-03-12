@@ -1,5 +1,5 @@
 # Loop from 1 to 500
-for i in {28..500}
+for i in {1..500}
 do
     echo "Processing iteration: $i"
 
