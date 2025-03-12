@@ -1,6 +1,5 @@
 """
 Author: Maryam KafiKang
-Created: 2024
 Description: This script infers transmission trees from TNet network output
             by computing maximum spanning trees from weighted edges.
             It processes multiple simulation outputs and preserves execution times.
