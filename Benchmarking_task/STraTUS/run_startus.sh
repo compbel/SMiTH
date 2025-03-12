@@ -20,7 +20,7 @@ count_hosts() {
     grep -o '[0-9]*_N[0-9]*:[0-9.]*' "$tree_file" | grep -o '^[0-9]*' | sort -u | wc -l
 }
 # Set paths to required files
-TREE_FILE="log_50/FAVITES_output_logSI_contemp_T200_N100_E1_${i}/error_free_files/phylogenetic_trees/Tnet_Tree.0"
+TREE_FILE="Favites_log/FAVITES_output_logSI_contemp_T200_N100_E1_${i}/error_free_files/phylogenetic_trees/Tnet_Tree.0"
 OUTPUT_PREFIX="stratus_output/FAVITES_output_logSI_contemp_T200_N100_E1_${i}/"
 MULTIPLE_SAMPLING_FILE="STraTUS/host_data/FAVITES_output_logSI_contemp_T200_N100_E1_${i}.csv"
 
