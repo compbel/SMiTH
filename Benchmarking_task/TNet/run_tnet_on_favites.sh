@@ -16,7 +16,7 @@
 mkdir -p logs
 
 i=$SLURM_ARRAY_TASK_ID
-input_dir="log_50"
+input_dir="Favites_log"
 
 # Define full path to the test directory
 full_path="$input_dir/FAVITES_output_logSI_contemp_T200_N100_E1_$i"
