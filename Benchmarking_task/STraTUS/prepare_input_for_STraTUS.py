@@ -32,7 +32,7 @@ def extract_host_tip_mapping(newick_file, output_csv):
 
 # Example usage
 for i in range(1,501):
-    newick_tree_file = f"log_50/FAVITES_output_logSI_contemp_T200_N100_E1_{i}/error_free_files/phylogenetic_trees/Tnet_Tree.0"  # Replace with your actual Newick file
+    newick_tree_file = f"Favites_log/FAVITES_output_logSI_contemp_T200_N100_E1_{i}/error_free_files/phylogenetic_trees/Tnet_Tree.0"  # Replace with your actual Newick file
     output_csv_file = f"host_data/FAVITES_output_logSI_contemp_T200_N100_E1_{i}.csv"
     if os.path.exists(newick_tree_file):
         extract_host_tip_mapping(newick_tree_file, output_csv_file)
