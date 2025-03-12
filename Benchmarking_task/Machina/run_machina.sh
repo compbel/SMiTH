@@ -8,7 +8,7 @@ do
     patient_labeling="pruned_trees_log50/FAVITES_output_logSI_contemp_T200_N100_E1_$i/patientLabeling.txt"
     coloring="pruned_trees_log50/FAVITES_output_logSI_contemp_T200_N100_E1_$i/coloring.txt"
     output_dir="machina_results_with_CorrectRoot/FAVITES_output_logSI_contemp_T200_N100_E1_$i"
-    root_file="log_50/FAVITES_output_logSI_contemp_T200_N100_E1_$i/error_free_files/transmission_network.txt"
+    root_file="Favites_log/FAVITES_output_logSI_contemp_T200_N100_E1_$i/error_free_files/transmission_network.txt"
     # Check if all required input files exist before proceeding
     if [[ ! -f "$patient_tree" || ! -f "$patient_labeling" || ! -f "$coloring" ]]; then
         echo "Skipping iteration $i: Missing required files."
