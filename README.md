@@ -204,7 +204,10 @@ tokenPos = 2;
 [migrSamp,objSamp,originSamp,consensus,siteList] = migrationSampler(filePhylo,sampGenerator,...
     nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos);
 ```
+## **Bechmarking Study**
+The Bechmarking_task directory provides a comparative analysis of the SMiTH model performance on two simulated datasets, Favites_log and Favites_exp, assessing its ability to reconstruct transmission networks compared to other models. Both datasets simulate disease transmission and viral evolution using a Barabási-Albert contact network with 100 nodes and the Generalized Epidemic Modeling Framework (GEMF). The datasets differ in epidemic growth models, with Favites_log following a logistic growth pattern (gradual spread and plateau) and Favites_exp using an exponential growth model (rapid outbreak expansion).
 
+The analysis compares SMiTH to various inference models, including Cassiopeia, Machina, Phyloscanner, STraTUS, TNet, and TransPhyloMulti. Each model-specific directory contains scripts for running the model, evaluating its performance, and comparing results against the ground truth transmission network using specificity, sensitivity, and F1-score metrics. The repository is structured to allow easy navigation, execution, and evaluation of different models on the Favites datasets.
 
 ## Citation
 TBA
