@@ -16,7 +16,7 @@ SMiTH (**S**ampling **Mi**gration **T**rees using **H**omomorphisms) is a tool f
 
 
 ## Running SMiTH Without a MATLAB License  
-This guide provides step-by-step instructions for running the compiled MATLAB application runMigrationSamplerReduced on a machine without MATLAB installed. The application was created using MATLAB Compiler, and it requires the MATLAB Runtime to execute.
+This guide provides step-by-step instructions for running the compiled MATLAB application inferTree on a machine without MATLAB installed. The application was created using MATLAB Compiler, and it requires the MATLAB Runtime to execute.
 Additionally, Gurobi is needed only when using the 'unconstrained' mode for inferring the compatibility of a migration tree and a phylogeny.
 
 ### **Prerequisites**  
@@ -44,22 +44,23 @@ MATLAB Runtime is required to run the compiled application.
 ### **Step 2: Download the Compiled Application**  
 Ensure you have all the necessary compiled application files. These should include:  
 
-The **executable file**:  
-   - **Windows**: `Compiler/runMigrationSamplerReduced.exe`  
-   - **Linux/macOS**: `Compiler/runMigrationSamplerReduced`  
+#### **Executable File**  
+- **Windows:** `CODE/runInferTree.exe`  
+- **macOS:** `CODE/runInferTree.app.zip` *(Extract before running)*  
+- **Linux:** `CODE/runInferTree.sh`  
 
-The **shell script** to launch the application:  
-   - `Compiler/run_runMigrationSamplerReduced.sh`  
+#### **Shell Script to Launch the Application**  
+- `CODE/run_runInferTree.sh` *(Required for macOS/Linux users)*  
 
-Any **additional input files or dependencies** required by the application:  
-   - `Compiler/config.txt` (configuration file for setting input parameters)  
-   - Any **data files** required by the program  
+#### **Additional Input Files & Dependencies**  
+- `CODE/config.txt` *(Configuration file for setting input parameters)*  
+- Any required **data files** for the program  
 
 
 
 
 ### **Step 3: Configure Input Parameters (`config.txt`)**  
-Before running the program, update Compiler/config.txt to define the required parameters for runMigrationSamplerReduced. This file specifies key input settings, such as the phylogenetic tree file, sampling method, and structural constraints. Properly configuring this file ensures that the program runs with the correct input data.
+Before running the program, update `CODE/config.txt` to define the required parameters for runMigrationSamplerReduced. This file specifies key input settings, such as the phylogenetic tree file, sampling method, and structural constraints. Properly configuring this file ensures that the program runs with the correct input data.
  
 ### **Required Parameters**
 * ``filePhylo``:  csv-file with the phylogenetic tree. It must consist of _N_ rows and 2 columns `parent ID` and `label` (color of this node / ID of the site corresponding to this node):
@@ -125,8 +126,8 @@ This part describes the **output files/variables** that the user will obtain **a
 1. Open **Command Prompt** (`cmd`).  
 2. Navigate to the directory containing the compiled files:  
 ```sh
-cd Compiler
-runMigrationSamplerReduced.exe
+cd CODE
+runInferTree.exe
 ```
 
 #### **Linux/MacOS**  
@@ -134,8 +135,8 @@ runMigrationSamplerReduced.exe
 2. Navigate to the directory containing the compiled files:  
 ```sh
 cd Compiler
-chmod +x run_runMigrationSamplerReduced.sh
-./run_runMigrationSamplerReduced.sh
+chmod +x run_runInferTree.sh
+./run_runInferTree.sh
 ```
 
 
