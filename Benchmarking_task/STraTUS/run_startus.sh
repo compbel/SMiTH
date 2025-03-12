@@ -3,7 +3,7 @@
 #SBATCH --output=logs/st_%A_%a.out
 #SBATCH --error=logs/st_%A_%a.out
 #SBATCH --nodes=1
-#SBATCH --array=1-250%50  # SLURM requires increasing arrays
+#SBATCH --array=1-500%50  # SLURM requires increasing arrays
 #SBATCH --partition=lo-core
 #SBATCH --mem=16G
 
