@@ -1,6 +1,5 @@
 """
 Author: Maryam KafiKang
-Created: 2024
 Description: This script runs Cassiopeia analysis on phylogenetic trees to infer transmission networks.
             The process involves several key steps:
             1. Tree Processing:
@@ -41,7 +40,7 @@ args = parser.parse_args()
 i = args.i
 
 # Define file paths
-tree_address = f"log_50/FAVITES_output_logSI_contemp_T200_N100_E1_{i}/error_free_files/phylogenetic_trees/Tnet_Tree.0"
+tree_address = f"Favites_log/FAVITES_output_logSI_contemp_T200_N100_E1_{i}/error_free_files/phylogenetic_trees/Tnet_Tree.0"
 output_path_original = f"output_original/FAVITES_output_logSI_contemp_T200_N100_E1_{i}_cassiopeia.txt"
 output_path_infered = f"output_infered/FAVITES_output_logSI_contemp_T200_N100_E1_{i}_cassiopeia.txt"
 
