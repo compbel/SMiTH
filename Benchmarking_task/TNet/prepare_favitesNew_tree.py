@@ -1,6 +1,5 @@
 """
 Author: Maryam KafiKang
-Created: 2024
 Description: This script prepares FAVITES phylogenetic tree files for TNet analysis
             by converting tree labels from FAVITES format to TNet compatible format.
             It processes multiple simulation outputs in batch.
@@ -41,7 +40,7 @@ def read_files_from_directories(root_dir):
         else:
             print(f'no tree for {file_path}')
 
-root_directory = 'log_50'
+root_directory = 'Favites_log'
 
 read_files_from_directories(root_directory)
 
