@@ -3,18 +3,11 @@
 In this directory, we present a **comparative analysis** of the **SMiTH model** results on two simulated datasets: **Favites_log** and **Favites_exp**. The goal of this analysis is to evaluate the performance of **SMiTH** in reconstructing transmission networks compared to other models.
 
 ## **Simulated Datasets**
-This section provides details about the simulated datasets used in our analysis. These datasets were generated using the Favites method to simulate transmission networks and phylogenies under controlled conditions.
+This section provides details about the simulated datasets used in our analysis. These datasets were generated using FAVITES (FrAmework for VIral Transmission and Evolution Simulation).
 
-The [Favites_log](https://uconn-my.sharepoint.com/:f:/g/personal/pavel_skums_uconn_edu/EkBG6Wu6y1dGpZFsFfWgJmUBaLBqtF6eRCBjlLW_BH-x1A?e=6wYFKX) and [Favites_exp](https://uconn-my.sharepoint.com/:f:/g/personal/pavel_skums_uconn_edu/EoTTY0RpWrZOgsCdK-qVHNgBx-DcakSYjwtzwVTicJ4Zmw?e=NHBQOd) datasets are available for download. Favites datasets both simulate disease transmission and viral evolution using a Barabási-Albert contact network with 100 nodes and the Generalized Epidemic Modeling Framework (GEMF). Both datasets generate phylogenetic trees using VirusTreeSimulator and model sequence evolution under a GTR+Gamma framework, incorporating realistic mutation rates and rate heterogeneity.
+Intra-site evolution uder the logistic coalescent model:  [Favites_log](https://uconn-my.sharepoint.com/:f:/g/personal/pavel_skums_uconn_edu/EkBG6Wu6y1dGpZFsFfWgJmUBaLBqtF6eRCBjlLW_BH-x1A?e=6wYFKX) 
 
-Key Differences Between Favites_log and Favites_exp:
-- Favites_log: Uses a logistic growth model, leading to a slower initial spread that plateaus over time.
-- Favites_exp: Uses an exponential growth model, resulting in faster outbreak expansion with continuous acceleration.
-- Favites_exp has a higher mutation rate (tree_mutation_rate: 0.2 vs. 0.01 in Favites_log), introducing more genetic variation.
-- Favites_exp uses edge-weighted seed selection, favoring well-connected nodes for initial infections, whereas Favites_log uses random seed selection.
-
-These datasets allow for comparative evaluation of transmission network inference models under different outbreak dynamics, providing insight into how growth patterns impact phylogenetic structures and transmission reconstruction accuracy.
-
+Intra-site evolution uder the exponential coalescent model: [Favites_exp](https://uconn-my.sharepoint.com/:f:/g/personal/pavel_skums_uconn_edu/EoTTY0RpWrZOgsCdK-qVHNgBx-DcakSYjwtzwVTicJ4Zmw?e=NHBQOd). 
 
 
 ## **Comparison Overview**
