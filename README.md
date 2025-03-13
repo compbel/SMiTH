@@ -113,7 +113,7 @@ tokenPos=2
 ```
 
 ### **Expected Output**
-This part describes the **output files/variables** that the user will obtain **after running `runMigrationSamplerReduced`**.
+This part describes the **output files/variables** that the user will obtain **after running the tool**.
 
  * ``originSamp``   origins (i.e., migration site corresponding to the root of the phylogeny) for sampled trees. Can be used to analyze migration directionality if needed.
  * ``consensus``   consensus matrix of the sample, i.e., `consensus(i,j)` is the frequency of sampled migration trees with vertices _i_ and _j_ being adjacent.
@@ -141,8 +141,8 @@ chmod +x run_runInferTree.sh
 ```
 
 
-## Running SMiTH Using MATLAB License 
-This guide provides step-by-step instructions for running the SMiTH code with a MATLAB license. The program requires MATLAB to be installed, and Gurobi is needed only when using the 'unconstrained' mode for inferring the compatibility of a migration tree and a phylogeny.
+## Running SMiTH as a MATLAB script 
+This guide provides step-by-step instructions for running the SMiTH code as a MATLAB script. This requires MATLAB to be installed, and Gurobi is needed only when using the 'unconstrained' mode for inferring the compatibility of a migration tree and a phylogeny.
 
 The project is executed using the runSMiTH.m script, where the user should call the main function migrationSampler with the required parameters.
 
