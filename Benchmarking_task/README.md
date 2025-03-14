@@ -9,6 +9,16 @@ Intra-site evolution under the logistic coalescent model:  [Favites_log](https:/
 
 Intra-site evolution under the exponential coalescent model: [Favites_exp](https://uconn-my.sharepoint.com/:f:/g/personal/pavel_skums_uconn_edu/EoTTY0RpWrZOgsCdK-qVHNgBx-DcakSYjwtzwVTicJ4Zmw?e=NHBQOd). 
 
+## **SMiTH scripts**
+The folder **SMiTH** contains Matlab scripts used to run SMiTH on simulated data, calculate algorithm's accuracy and compare it with results of other tools. 
+
+run_simulated_data.m: the main script that can be used to run SMiTH on all simulated datasets. Requires settings correct paths to input and output directories.
+
+analyzePlotSimul.m: processing the algoritms' results and creating plots used in the paper
+
+si_model_simul_rand_rates.m: implementation of a SI model with variable migration rates (used in benchmarking, the details can be found in the paper)
+
+undersampTree.m: used to produce data under random site sampling.
 
 ## **Comparison Overview**
 We benchamrked the **SMiTH tool** against the following transmission network inference tools:  
