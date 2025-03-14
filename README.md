@@ -192,7 +192,7 @@ The project is executed using the runSMiTH.m script, where the user should call 
  * ``siteList``   the list of migration sites in the same order as the migration tree vertices, i.e., `siteList(i)` is the site corresponding to the _i_<sup>th</sup> vertex of migration trees from `migrSamp`.
 
 ### Example
-```filePhylo = ['input example' filesep 'input8.csv'];
+filePhylo = ['input example' filesep 'input8.csv'];
 sampGenerator = @randTreePrefAttach;
 nSamp = 100;
 constr = 'convexMaxCompact'; 
