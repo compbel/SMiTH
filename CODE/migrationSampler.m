@@ -4,14 +4,20 @@ function [migrSamp,objSamp,originSamp,consensus,siteList] = migrationSampler(fil
 % phylogeny and sampled from the given random tree distribution
 % Input:
 % Required parameters:
-% (*) filePhylo - file with the phylogenetic tree. Should consist of N rows
+% (*) filePhylo - file with the phylogenetic tree. Can be in two possible
+% formats:
+% (a) newick format with an extension nwk, newick, tre, or tree. It is assumed that for each
+% leaf the id of the population where it belongs is the part of its header. Parameters delimeter 
+% and tokenPos should be specified.  
+% (b) custom format with the extension csv.
+% Should consist of N rows
 % of the form
 % p1 s1
 % p2 s2
 % ...
 % pN sN
 % where the ith row corresponds to the ith tree node, pi is the
-% parent of the node i and si is an id of the site corresponding to that
+% parent of the node i and pi is an id of the site corresponding to that
 % node. pr=0 for the root node r, and si=0 for internal nodes i.
 % (*) sampGenerator - handle to the function sampling candidate migration trees from a
 % particular distribution. Should have the tree size as a single argument.
@@ -50,15 +56,22 @@ function [migrSamp,objSamp,originSamp,consensus,siteList] = migrationSampler(fil
 % the ith vertex of migration trees from migrSamp.
 
 contrUnconstr = 0;
-treeData = readmatrix(filePhylo);
-AMtree = zeros(size(treeData,1),size(treeData,1));
-patients = zeros(1,2*size(treeData,1)-1);
-for i = 1:size(treeData,1)
-    if treeData(i,1)~=0
-        AMtree(treeData(i,1),i) = 1;
+[~, ~, ext] = fileparts(filePhylo);
+if strcmpi(ext, '.csv')
+    treeData = readmatrix(filePhylo);
+    AMtree = zeros(size(treeData,1),size(treeData,1));
+    patients = zeros(1,2*size(treeData,1)-1);
+    for i = 1:size(treeData,1)
+        if treeData(i,1)~=0
+            AMtree(treeData(i,1),i) = 1;
+        end
+        patients(i) = treeData(i,2);
     end
-    patients(i) = treeData(i,2);
+else
+    phylotree = phytreeread(filePhylo);
+    [AMtree,patients] = phytree2graph(phylotree,delimeter,tokenPos);
 end
+
 
 [AMtree, patients,~] = reduceTree(AMtree,patients);
 patientList = sort(unique(patients));
@@ -71,7 +84,7 @@ else
     divers = [];
 end
 
-[traits,~] = pat2traits(patients,patientList);
+[traits,~] = pat2traits1(patients,patientList);
 
 if strcmp(constr,'convex') | strcmp(constr,'compact') | strcmp(constr,'convexMaxCompact') | contrUnconstr
     [AMtree,traits] = contractMultLabel(AMtree,traits,nPat);
@@ -116,3 +129,4 @@ objSamp = objSamp(ind);
 originSamp = originSamp(ind);
 consensus = sum(cat(3, AMsamp{:}), 3)/length(AMsamp);
 siteList = patientList;
+
