@@ -5,9 +5,9 @@ In this directory, we present a **comparative analysis** of the **SMiTH model** 
 ## **Simulated Datasets**
 This section provides details about the simulated datasets used in our analysis. These datasets were generated using FAVITES (FrAmework for VIral Transmission and Evolution Simulation).
 
-Intra-site evolution under the logistic coalescent model:  [Favites_log](https://uconn-my.sharepoint.com/:f:/g/personal/pavel_skums_uconn_edu/EkBG6Wu6y1dGpZFsFfWgJmUBaLBqtF6eRCBjlLW_BH-x1A?e=6wYFKX) 
+Intra-site evolution under the logistic coalescent model:  [Favites_log](https://uconn-my.sharepoint.com/:u:/r/personal/marykafi_uconn_edu/Documents/FavitesDataset/Favites_log.zip?csf=1&web=1&e=x8HFsd) 
 
-Intra-site evolution under the exponential coalescent model: [Favites_exp](https://uconn-my.sharepoint.com/:f:/g/personal/pavel_skums_uconn_edu/EoTTY0RpWrZOgsCdK-qVHNgBx-DcakSYjwtzwVTicJ4Zmw?e=NHBQOd). 
+Intra-site evolution under the exponential coalescent model: [Favites_exp](https://uconn-my.sharepoint.com/:u:/r/personal/marykafi_uconn_edu/Documents/FavitesDataset/Favites_exp.zip?csf=1&web=1&e=PVR1wv). 
 
 ## **SMiTH scripts**
 The folder **SMiTH** contains Matlab scripts used to run SMiTH on simulated data, calculate algorithm's accuracy and compare it with results of other tools. 
