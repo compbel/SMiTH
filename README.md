@@ -207,9 +207,9 @@ tokenPos = 2;
 ```
 
 ## **Simulated Data**
-- [**exp_randTransRate**]([link_to_file](https://uconn-my.sharepoint.com/:f:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_randTransRate?csf=1&web=1&e=efK6K8)) – Data generated with random migration rates  
-- [**exp_samp1.zip**]([link_to_file](https://uconn-my.sharepoint.com/:u:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_samp1.zip?csf=1&web=1&e=qlIfwO)) – Data with one sequence per site  
-- [**exp_samp10.zip**]([link_to_file](https://uconn-my.sharepoint.com/:u:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_samp10.zip?csf=1&web=1&e=oInEkC)) – Data with ten sequences per site  
+- [**exp_randTransRate**](https://uconn-my.sharepoint.com/:f:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_randTransRate?csf=1&web=1&e=efK6K8) – Data generated with random migration rates  
+- [**exp_samp1.zip**](https://uconn-my.sharepoint.com/:u:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_samp1.zip?csf=1&web=1&e=qlIfwO) – Data with one sequence per site  
+- [**exp_samp10.zip**](https://uconn-my.sharepoint.com/:u:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_samp10.zip?csf=1&web=1&e=oInEkC) – Data with ten sequences per site  
 - [**exp_samp50.zip**](https://uconn-my.sharepoint.com/:u:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_samp50.zip?csf=1&web=1&e=VC1YJl) – Data with fifty sequences per site  
 
 ## **Bechmarking Study**
