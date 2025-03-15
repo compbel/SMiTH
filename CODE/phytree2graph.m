@@ -1,4 +1,4 @@
-function [AM,patients,seqID] = phytree2graph(Z,delimeter,pos)
+function [AM,patients] = phytree2graph(Z,delimeter,pos)
 
 names = get(Z,'LeafNames');
 nSeq = length(names);
