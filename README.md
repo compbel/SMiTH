@@ -45,15 +45,15 @@ MATLAB Runtime is required to run the compiled application.
 Ensure you have all the necessary compiled application files. These should include:  
 
 #### **Executable File**  
-- **Windows:** `CODE/runInferTree.exe`  
-- **macOS:** `CODE/runInferTree.app.zip` *(Extract before running)*  
-- **Linux:** `CODE/runInferTree.sh`  
+- **Windows:** `CompiledCode/InferTree.exe`  
+- **macOS:** `CompiledCode/InferTree.app.zip` *(Extract before running)*  
+- **Linux:** `CompiledCode/run_InferTree.sh`  
 
 #### **Shell Script to Launch the Application**  
-- `CODE/run_runInferTree.sh` *(Required for macOS/Linux users)*  
+- `CompiledCode/run_InferTree.sh` *(Required for macOS/Linux users)*  
 
 #### **Additional Input Files & Dependencies**  
-- `CODE/config.txt` *(Configuration file for setting input parameters)*  
+- `CompiledCode/config.txt` *(Configuration file for setting input parameters)*  
 - Any required **data files** for the program  
 
 
@@ -127,17 +127,17 @@ This part describes the **output files/variables** that the user will obtain **a
 1. Open **Command Prompt** (`cmd`).  
 2. Navigate to the directory containing the compiled files:  
 ```sh
-cd CODE
-runInferTree.exe
+cd CompiledCode
+InferTree.exe
 ```
 
 #### **Linux/MacOS**  
 1. Open **Command Prompt** (`cmd`).  
 2. Navigate to the directory containing the compiled files:  
 ```sh
-cd Compiler
-chmod +x run_runInferTree.sh
-./run_runInferTree.sh
+cd CompiledCode
+chmod +x run_InferTree.sh
+./run_InferTree.sh
 ```
 
 
