@@ -20,9 +20,9 @@ si_model_simul_rand_rates.m: implementation of a SI model with variable migratio
 
 undersampTree.m: used to produce data under random site sampling.
 
-## **Comparison Overview**
+## **Comparison with other tools**
 We benchamrked the **SMiTH tool** against the following transmission network inference tools:  
-- **Cassiopeia**  
+- **FitchCount (part of Cassiopeia)**  
 - **Machina**  
 - **Phyloscanner**  
 - **STraTUS**  
@@ -33,7 +33,7 @@ We benchamrked the **SMiTH tool** against the following transmission network inf
 Each **model-specific directory** contains:  
 **`/model_name/`** — A subdirectory for each model comparison, including:  
 - **`run_model.sh` / `run_model.py`** — Code or scripts used to run the model on the dataset.  
-- **Evaluation scripts** — Methods for analyzing the model’s performance.  
+- **Evaluation scripts** — scripts for analyzing the model’s performance.  
 
 
 
