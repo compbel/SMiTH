@@ -206,12 +206,6 @@ tokenPos = 2;
     nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos);
 ```
 
-## **Simulated Data**
-- [**exp_randTransRate**](https://uconn-my.sharepoint.com/:f:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_randTransRate?csf=1&web=1&e=efK6K8) – Data generated with random migration rates  
-- [**exp_samp1.zip**](https://uconn-my.sharepoint.com/:u:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_samp1.zip?csf=1&web=1&e=qlIfwO) – Data with one sequence per site  
-- [**exp_samp10.zip**](https://uconn-my.sharepoint.com/:u:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_samp10.zip?csf=1&web=1&e=oInEkC) – Data with ten sequences per site  
-- [**exp_samp50.zip**](https://uconn-my.sharepoint.com/:u:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_samp50.zip?csf=1&web=1&e=VC1YJl) – Data with fifty sequences per site  
-
 ## **Bechmarking Study**
 The Bechmarking_task directory provides a comparative analysis of the SMiTH model performance on two simulated datasets, Favites_log and Favites_exp, assessing its ability to reconstruct transmission networks compared to other models. Both datasets simulate disease transmission and viral evolution using a Barabási-Albert contact network with 100 nodes and the Generalized Epidemic Modeling Framework (GEMF). The datasets differ in epidemic growth models, with Favites_log following a logistic growth pattern (gradual spread and plateau) and Favites_exp using an exponential growth model (rapid outbreak expansion).
 
