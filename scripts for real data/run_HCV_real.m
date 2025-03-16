@@ -1,6 +1,6 @@
 clear;
 
-inputFolder = 'HCV_real';
+inputFolder = 'secondary data';
 outbreaks = {'AI','AW'};
 sources = [4 2];
 nOut = length(outbreaks);
@@ -18,8 +18,8 @@ fscoresTotal = zeros(1,length(outbreaks));
 for i = 1:nOut
     outb_name = outbreaks{i};
     outFile = ['results' filesep 'realHCV' filesep 'res_' outb_name '.mat'];
-    filePhylo = [inputFolder filesep 'RAxML_bestTree.raxmltree' outb_name];
-    fileSeq = [inputFolder filesep  outbreaks{i} '_all.fas'];
+    filePhylo = [inputFolder filesep 'RAxML_bestTree.raxmltree' outb_name]; %phylogenetic tree
+    fileSeq = [inputFolder filesep  outbreaks{i} '_all.fas']; %sequences; available from references sited in the paper 
 
 
     [migrSamp,objSamp,originSamp,consensus, siteList] = migrationSampler(filePhylo,sampGenerator,...
