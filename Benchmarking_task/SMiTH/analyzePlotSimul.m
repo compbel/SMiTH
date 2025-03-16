@@ -3,7 +3,7 @@ nTests = 500;
 minSize = 5;
 maxSize = 30;
 
-load('nVertTest500.mat');
+load(['results' filesep 'nVertTest500.mat']);
 
 netPriors = {'True','SF','Prufer'};
 netPriorsNames = {'Degenerate','Scale-free','Uniform'};
@@ -403,7 +403,7 @@ nTests = 500;
 minSize = 5;
 maxSize = 30;
 
-load('nVertTest500.mat');
+load(['results' filesep 'nVertTest500.mat']);
 
 netPriors = {'SF','Prufer'};
 netPriorsNames = {'Scale-free','Uniform'};
@@ -764,10 +764,52 @@ prec = zeros(1,nTests);
         median(fscore(ind))
         std(fscore(ind))
         
+
+%% 
+
+% plot random sampling and random transmission rates
+clear;
+fscores = [];
+groups = [];
+model_names = {'basic', 'random migration rates', 'random sampling rates'};
+
+load("results/fscores_basic.mat");
+fscores = [fscores rec];
+groups = [groups ones(1,length(rec))];
+load("results/fscores_varrate.mat");
+fscores = [fscores rec];
+groups = [groups 2*ones(1,length(rec))];
+load("results/fscores_varsamp.mat");
+fscores = [fscores fscore];
+groups = [groups 3*ones(1,length(fscore))];
+
+
+figure
+set(gcf, 'Position',  [100, 100, 1300, 570])
+    % axes(ha(net));
+    bc = boxchart(groups,fscores,'GroupByColor',groups,...
+        "BoxWidth",3,'BoxFaceAlpha',0.5,'BoxMedianLineColor','k');
+    ylabel('f-score','FontSize', 18,'FontWeight','bold');
+    ax = gca;
+    ax.XLim = [0 4];
+    ax.FontSize = 16;
+    ax.FontWeight = 'bold';
+    set(gca,'XTickLabel',[]);
+    ylim([0 1]);
+    grid on
+    xl = xlim;
+    yl = ylim;
+lgd = legend(model_names,'Location','southoutside','FontSize',18,'FontWeight','bold');
+lgd.NumColumns = length(model_names);
+lgd.Position(1) = 0.35;
+lgd.Position(2) = 0.03;
+exportgraphics(gcf,['figures' filesep 'misc_rand.png'],'Resolution',600)
+
+
 %% 
 % random patients undersampling
 clear;
-resFolder = ['results' filesep 'obj_convex_sampParsObjDP' filesep 'SF_undersampPat'];
+resFolder = ['results' filesep 'obj_convex_sampParsObjDP' filesep 'SF_undersampPat50'];
 nTests = 500;
 nVertTestRev = zeros(1,nTests);
 sampSize = zeros(1,nTests);
@@ -811,29 +853,31 @@ prec = zeros(1,nTests);
         std(fscore(ind))
 %% 
 
-% plot random sampling and random transmission rates
+% plot random patient sampling
 clear;
 fscores = [];
 groups = [];
-model_names = {'basic', 'random migration rates', 'random sampling rates'};
+model_names = {'basic', '\rho = 0.75', '\rho = 0.5'};
 
 load("results/fscores_basic.mat");
 fscores = [fscores rec];
 groups = [groups ones(1,length(rec))];
-load("results/fscores_varrate.mat");
-fscores = [fscores rec];
-groups = [groups 2*ones(1,length(rec))];
-load("results/fscores_varsamp.mat");
+load("results/fscores_samppat75.mat");
+fscores = [fscores fscore];
+groups = [groups 2*ones(1,length(fscore))];
+load("results/fscores_samppat50.mat");
 fscores = [fscores fscore];
 groups = [groups 3*ones(1,length(fscore))];
 
 
 figure
+% [ha, pos] = tight_subplot(nRow,nCol,[.045 .03],[.1 0.05],[.1 .1]);
 set(gcf, 'Position',  [100, 100, 1300, 570])
     % axes(ha(net));
     bc = boxchart(groups,fscores,'GroupByColor',groups,...
         "BoxWidth",3,'BoxFaceAlpha',0.5,'BoxMedianLineColor','k');
     ylabel('f-score','FontSize', 18,'FontWeight','bold');
+    % title('Algorithms comparision','FontSize', 18);
     ax = gca;
     ax.XLim = [0 4];
     ax.FontSize = 16;
@@ -843,8 +887,9 @@ set(gcf, 'Position',  [100, 100, 1300, 570])
     grid on
     xl = xlim;
     yl = ylim;
+    % text(0.99*xl(2),0.99*yl(2),'(a)','FontSize',30,'FontWeight','bold','HorizontalAlignment','right','VerticalAlignment','top')
 lgd = legend(model_names,'Location','southoutside','FontSize',18,'FontWeight','bold');
 lgd.NumColumns = length(model_names);
 lgd.Position(1) = 0.35;
 lgd.Position(2) = 0.03;
-exportgraphics(gcf,['figures' filesep 'misc_rand.png'],'Resolution',600)
+exportgraphics(gcf,['figures' filesep 'rand_pat_undersamp.png'],'Resolution',600)
