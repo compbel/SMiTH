@@ -3,11 +3,16 @@
 In this directory, we present a **comparative analysis** of the **SMiTH model** results on two simulated datasets: **Favites_log** and **Favites_exp**. The goal of this analysis is to evaluate the performance of **SMiTH** in reconstructing transmission networks compared to other models.
 
 ## **Simulated Datasets**
-This section provides details about the simulated datasets used in our analysis. These datasets were generated using FAVITES (FrAmework for VIral Transmission and Evolution Simulation).
+This section provides details about the simulated datasets used in our analysis. These datasets were generated using FAVITES (FrAmework for VIral Transmission and Evolution Simulation). All configuration files for these simulations are located in the CompiledCode/FAVITES_Configs directory, named as Favites_[simulated_data]_Config.txt, where [simulated_data] corresponds to the dataset name.
 
-Intra-site evolution under the logistic coalescent model:  [Favites_log](https://uconn-my.sharepoint.com/:u:/r/personal/marykafi_uconn_edu/Documents/FavitesDataset/Favites_log.zip?csf=1&web=1&e=x8HFsd) 
+- [Favites_log](https://uconn-my.sharepoint.com/:u:/r/personal/marykafi_uconn_edu/Documents/FavitesDataset/Favites_log.zip?csf=1&web=1&e=x8HFsd) - Intra-site evolution under the logistic coalescent model 
 
-Intra-site evolution under the exponential coalescent model: [Favites_exp](https://uconn-my.sharepoint.com/:u:/r/personal/marykafi_uconn_edu/Documents/FavitesDataset/Favites_exp.zip?csf=1&web=1&e=PVR1wv). 
+- [Favites_exp](https://uconn-my.sharepoint.com/:u:/r/personal/marykafi_uconn_edu/Documents/FavitesDataset/Favites_exp.zip?csf=1&web=1&e=PVR1wv) - Intra-site evolution under the exponential coalescent model
+
+- [**exp_randTransRate**](https://uconn-my.sharepoint.com/:f:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_randTransRate?csf=1&web=1&e=efK6K8) – Data generated with random migration rates  
+- [**exp_samp1.zip**](https://uconn-my.sharepoint.com/:u:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_samp1.zip?csf=1&web=1&e=qlIfwO) – Data with one sequence per site  
+- [**exp_samp10.zip**](https://uconn-my.sharepoint.com/:u:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_samp10.zip?csf=1&web=1&e=oInEkC) – Data with ten sequences per site  
+- [**exp_samp50.zip**](https://uconn-my.sharepoint.com/:u:/r/personal/pavel_skums_uconn_edu/Documents/Matlab/transNetHomomorphism/Favites_new_revision/exp_samp50.zip?csf=1&web=1&e=VC1YJl) – Data with fifty sequences per site  
 
 ## **SMiTH scripts**
 The folder **SMiTH** contains Matlab scripts used to run SMiTH on simulated data, perform benchmarking analysis and create plots for the paper. 
