@@ -1,0 +1,19 @@
+node ID,color as number,original encoding,anatomical site
+0,-1,A,NA
+1,-1,B,NA
+2,-1,C,NA
+3,2,D1,ROv
+4,-1,E,NA
+5,2,F1,ROv
+6,2,G1,ROv
+7,2,H1,ROv
+8,1,A1,LPv
+9,0,A2,LOv
+10,2,A3,ROv
+11,3,A4,RPv
+12,1,B1,LPv
+13,0,B2,LOv
+14,2,B3,ROv
+15,3,B4,RPv
+16,2,C1,ROv
+17,2,E1,ROv

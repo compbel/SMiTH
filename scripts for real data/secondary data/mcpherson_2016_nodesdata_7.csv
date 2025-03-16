@@ -1,0 +1,20 @@
+node ID,color as number,original encoding,anatomical site
+0,-1,A,NA
+1,-1,B,NA
+2,-1,C,NA
+3,-1,D,NA
+4,1,E1,LOv
+5,1,A1,LOv
+6,5,A2,Bwl
+7,4,A3,RUt
+8,2,A4,ROv
+9,0,B1,Brn
+10,6,B2,Bm
+11,4,B3,RUt
+12,1,C1,LOv
+13,5,C2,Bwl
+14,4,C3,RUt
+15,2,C4,ROv
+16,5,D1,Bwl
+17,3,D2,RPv
+18,4,D3,RUt
