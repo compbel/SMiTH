@@ -1,5 +1,6 @@
 clear;
-filePhylo = ['input example' filesep 'tree16.csv'];
+% filePhylo = ['input example' filesep 'tree16.csv'];
+filePhylo = ['input example' filesep 'tree16.tre'];
 sampGenerator = @randTreePrefAttach;
 nSamp = 10000;
 constr = 'convexMaxCompact'; 

@@ -4,7 +4,13 @@ function [originSamp,consensus,siteList] = migrationSamplerExec(filePhylo,sampGe
 % phylogeny and sampled from the given random tree distribution
 % Input:
 % Required parameters:
-% (*) filePhylo - file with the phylogenetic tree. Should consist of N rows
+% (*) filePhylo - file with the phylogenetic tree. Can be in two possible
+% formats:
+% (a) newick format with any extension other than csv. It is assumed that for each
+% leaf the id of the population where it belongs is the part of its header. Parameters delimeter 
+% and tokenPos should be specified.  
+% (b) custom format with the extension csv.
+% Should consist of N rows
 % of the form
 % p1 s1
 % p2 s2
@@ -50,14 +56,20 @@ function [originSamp,consensus,siteList] = migrationSamplerExec(filePhylo,sampGe
 % the ith vertex of migration trees from migrSamp.
 
 contrUnconstr = 0;
-treeData = readmatrix(filePhylo);
-AMtree = zeros(size(treeData,1),size(treeData,1));
-patients = zeros(1,2*size(treeData,1)-1);
-for i = 1:size(treeData,1)
-    if treeData(i,1)~=0
-        AMtree(treeData(i,1),i) = 1;
+[~, ~, ext] = fileparts(filePhylo);
+if strcmpi(ext, '.csv')
+    treeData = readmatrix(filePhylo);
+    AMtree = zeros(size(treeData,1),size(treeData,1));
+    patients = zeros(1,2*size(treeData,1)-1);
+    for i = 1:size(treeData,1)
+        if treeData(i,1)~=0
+            AMtree(treeData(i,1),i) = 1;
+        end
+        patients(i) = treeData(i,2);
     end
-    patients(i) = treeData(i,2);
+else
+    phylotree = phytreeread(filePhylo);
+    [AMtree,patients] = phytree2graph(phylotree,delimeter,tokenPos);
 end
 
 [AMtree, patients,~] = reduceTree(AMtree,patients);
