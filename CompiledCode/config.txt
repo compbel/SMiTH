@@ -1,5 +1,5 @@
 dir_name=tree16
-filePhylo=../input/tree16.csv
+filePhylo=../input/tree16.tre
 nSamp=200
 constr=convexMaxCompact
 timeLimit=500
