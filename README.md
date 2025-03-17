@@ -60,7 +60,7 @@ Ensure you have all the necessary compiled application files. These should inclu
 
 
 ### **Step 3: Configure Input Parameters (`config.txt`)**  
-Before running the program, update `CODE/config.txt` to define the required parameters for runMigrationSamplerReduced. This file specifies key input settings, such as the phylogenetic tree file, sampling method, and structural constraints. Properly configuring this file ensures that the program runs with the correct input data.
+Before running the program, update `CompiledCode/config.txt` to define the required parameters for migrationSamplerExec. This file specifies key input settings, such as the phylogenetic tree file (newick format or custom csv format), sampling method, and structural constraints. Properly configuring this file ensures that the program runs with the correct input data.
  
 ### **Required Parameters**
 * ``dir_name``: The name of the output directory where the results of the SMiTH model will be saved.
