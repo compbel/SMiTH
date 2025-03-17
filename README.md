@@ -63,6 +63,7 @@ Ensure you have all the necessary compiled application files. These should inclu
 Before running the program, update `CODE/config.txt` to define the required parameters for runMigrationSamplerReduced. This file specifies key input settings, such as the phylogenetic tree file, sampling method, and structural constraints. Properly configuring this file ensures that the program runs with the correct input data.
  
 ### **Required Parameters**
+* ``dir_name``: The name of the output directory where the results of the SMiTH model will be saved.
 * ``filePhylo``:  csv-file with the phylogenetic tree. It must consist of _N_ rows and 2 columns `parent ID` and `label` (color of this node / ID of the site corresponding to this node):
    - the _i_<sup>th</sup> row corresponds to the _i_<sup>th</sup> tree node;
    - `pi` is the parent of the node _i_ and ``si`` is an ID of the site corresponding to that node;
@@ -102,17 +103,18 @@ Before running the program, update `CODE/config.txt` to define the required para
    * ``tokenPos``   the index of the token of a sequence header in the fasta file with the population ID.  E.g., for the sequence header `>N614|56|100.0`, it is equal `2` (we want to separate `56`). If you do not use diversity in the algorithm, set `tokenPos = NaN`.
 ### Example
 ```
-filePhylo=../input example/tree16.csv
+dir_name=tree16
+filePhylo=../input/tree16.csv
 nSamp=200
 constr=convexMaxCompact
 timeLimit=500
-fileSeq=../input example/sequence_data16.fasta
+fileSeq=../input/sequence_data16.fasta
 delimeter=|
 tokenPos=2
 ```
 
 ### **Expected Output**
-This part describes the **output files/variables** that the user will obtain **after running the tool**.
+This section describes the output files and variables generated after running the tool. Once the model completes, all results will be saved as CSV files in the output directory such as ouput/dir_name/.
 
  * ``originSamp``   origins (i.e., migration site corresponding to the root of the phylogeny) for sampled trees. Can be used to analyze migration directionality if needed.
  * ``consensus``   consensus matrix of the sample, i.e., `consensus(i,j)` is the frequency of sampled migration trees with vertices _i_ and _j_ being adjacent.
