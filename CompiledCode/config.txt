@@ -1,8 +1,8 @@
 dir_name=tree16
-filePhylo=./input/tree16.csv
+filePhylo=../input/tree16.csv
 nSamp=200
 constr=convexMaxCompact
 timeLimit=500
-fileSeq=./input/sequence_data16.fasta
+fileSeq=../input/sequence_data16.fasta
 delimeter=|
 tokenPos=2
