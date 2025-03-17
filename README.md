@@ -152,20 +152,22 @@ The project is executed using the runSMiTH.m script, where the user should call 
 ```[migrSamp,objSamp,originSamp,consensus,siteList] = migrationSampler(filePhylo,sampGenerator,nSamp,constr,timeLimit,fileSeq,delimeter,tokenPos)```
 
 ### Input: required parameters
-* ``filePhylo``:  csv-file with the phylogenetic tree. It must consist of _N_ rows and 2 columns `parent ID` and `label` (color of this node / ID of the site corresponding to this node):
-   - the _i_<sup>th</sup> row corresponds to the _i_<sup>th</sup> tree node;
-   - `pi` is the parent of the node _i_ and ``si`` is an ID of the site corresponding to that node;
-   - `pr=0` for the root node `r`, and `si=0` for internal nodes _i_.
-
-   `p1` `s1`
+* ``filePhylo`` : file with the phylogenetic tree. Can be in two possible formats:
+   1. newick format with any extension other than csv. It is assumed that for each leaf the id of the population where it belongs is the part of its header. Parameters delimeter and tokenPos should be specified.  
+   2. custom format with the extension csv. A csv-file with the phylogenetic tree. It must consist of _N_ rows and 2 columns `parent ID` and `label` (color of this node / ID of the site corresponding to this node):
+      - the _i_<sup>th</sup> row corresponds to the _i_<sup>th</sup> tree node;
+      - `pi` is the parent of the node _i_ and ``si`` is an ID of the site corresponding to that node;
+      - `pr=0` for the root node `r`, and `si=0` for internal nodes _i_.
    
-   `p2` `s2`
-   
-   `...`
-   
-   `pN` `sN`
-  
-     See some examples in the folder `input example`.
+         `p1` `s1`
+         
+         `p2` `s2`
+         
+         `...`
+         
+         `pN` `sN`
+        
+           See some examples in the folder `input example`.
 
 * ``sampGenerator``   handle to the function sampling candidate migration trees from a particular distribution. Should have the tree size as a single argument. Current version of SMiTH package provides two predefined sampling function:
    - `@randTreeUniform` for uniform sampling;
