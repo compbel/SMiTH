@@ -9,6 +9,7 @@ fclose(fileID);
 inputMap = containers.Map(configData{1}, configData{2});
 
 % Assign values (convert numbers where needed)
+dir_name = inputMap('dir_name');
 filePhylo = inputMap('filePhylo');
 sampGenerator = @randTreePrefAttach;  % Assume this remains constant
 nSamp = str2double(inputMap('nSamp'));
@@ -150,11 +151,9 @@ consensus = sum(cat(3, AMsamp{:}), 3)/length(AMsamp);
 siteList = patientList;
 % Display results
 
-%save outpuconf
-[~, treeName, ~] = fileparts(filePhylo);
 
 % Create output directory
-outputDir = fullfile('output', treeName);
+outputDir = fullfile('output', dir_name);
 if ~exist(outputDir, 'dir')
     mkdir(outputDir);
 end
