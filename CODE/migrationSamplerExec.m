@@ -83,7 +83,7 @@ else
     divers = [];
 end
 
-[traits,~] = pat2traits1(patients,patientList);
+[traits,~] = pat2traits(patients,patientList);
 
 if strcmp(constr,'convex') | strcmp(constr,'compact') | strcmp(constr,'convexMaxCompact') | contrUnconstr
     [AMtree,traits] = contractMultLabel(AMtree,traits,nPat);
