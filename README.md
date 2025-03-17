@@ -102,12 +102,11 @@ Before running the program, update `CODE/config.txt` to define the required para
    * ``tokenPos``   the index of the token of a sequence header in the fasta file with the population ID.  E.g., for the sequence header `>N614|56|100.0`, it is equal `2` (we want to separate `56`). If you do not use diversity in the algorithm, set `tokenPos = NaN`.
 ### Example
 ```
-filePhylo=myPhyloFile.txt
+filePhylo=../input example/tree16.csv
 nSamp=200
 constr=convexMaxCompact
 timeLimit=500
-perc=100
-fileSeq=sequence_data8.fasta
+fileSeq=../input example/sequence_data16.fasta
 delimeter=|
 tokenPos=2
 ```
@@ -137,7 +136,7 @@ InferTree.exe
 ```sh
 cd CompiledCode
 chmod +x run_InferTree.sh
-./run_InferTree.sh
+./run_InferTree.sh /Applications/MATLAB/MATLAB_Runtime/R2024b config.txt
 ```
 
 
