@@ -121,6 +121,6 @@ end
 
 
 histEdges = 0.5:1:(nPat+0.5);
-originSamp = histcounts(originSamp, histEdges);
+originSamp = histcounts(originSamp, histEdges,'Normalization', 'probability');
 consensus = sum(cat(3, AMsamp{:}), 3)/length(AMsamp);
 siteList = patientList;
