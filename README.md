@@ -217,4 +217,4 @@ The Bechmarking_task directory provides a comparative analysis of the SMiTH mode
 The analysis compares SMiTH to various inference models, including Cassiopeia, Machina, Phyloscanner, STraTUS, TNet, and TransPhyloMulti. Each model-specific directory contains scripts for running the model, evaluating its performance, and comparing results against the ground truth transmission network using specificity, sensitivity, and F1-score metrics. The repository is structured to allow easy navigation, execution, and evaluation of different models on the Favites datasets.
 
 ## Citation
-TBA
+Kuzmin, K., Schmidt, H., Kafi Kang, M., Snir, S., Raphael, B.J. and Skums, P., 2025. A graph homomorphism approach for unraveling histories of metastatic cancers and viral outbreaks under evolutionary constraints. Nature communications, 16(1), p.8027.
